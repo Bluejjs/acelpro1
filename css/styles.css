@@ -418,14 +418,32 @@
     box-shadow:0 0 10px rgba(63,118,168,.6);
   }
 
-  /* header compacts on scroll */
-  header{transition:height .25s ease, background .25s ease, box-shadow .25s ease;}
+  /* header estable: mantiene la misma altura al hacer scroll para evitar saltos */
+  header{transition:background .25s ease, box-shadow .25s ease;}
   header.is-scrolled{box-shadow:0 6px 24px rgba(0,0,0,.28);}
-  header.is-scrolled .nav{height:64px;}
-  header.is-scrolled .brand-icon{width:32px;}
-  header.is-scrolled .brand-text{font-size:19px;}
-  header.is-scrolled .brand-text small{display:none;}
-  .nav{transition:height .25s ease;}
+  .nav{transition:none;}
+
+  /* Botón de menú móvil siempre visible y con fondo */
+  @media (max-width:860px){
+    .nav-toggle{
+      width:44px;
+      height:44px;
+      min-width:44px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:var(--orange);
+      color:var(--white);
+      border:1px solid rgba(255,255,255,.28);
+      border-radius:4px;
+      box-shadow:0 4px 14px rgba(0,0,0,.28);
+    }
+    .nav-toggle:hover,.nav-toggle:focus-visible{
+      background:var(--orange-dark);
+      outline:none;
+    }
+    .nav-toggle svg{display:block;}
+  }
 
   /* ================= SCROLL REVEAL ================= */
   [data-reveal]{
