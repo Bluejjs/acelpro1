@@ -1,1 +1,28 @@
+AcelPro — carpeta de imágenes
 
+ARCHIVOS ACTIVOS (en uso por el sitio):
+- acelpro-icon.png          -> icono del arco/logo, usado en el header y footer.
+- acelpro-icon-square.png   -> misma imagen recortada a cuadrado, usada como favicon
+                               y en el schema JSON-LD (dato estructurado para Google).
+- distribucion-motor.jpg    -> foto de fondo del hero.
+
+ARCHIVO SIN USAR (guardado por si sirve de referencia):
+- logo-original-cortado-NO-USAR.png
+  Este es el logo original que subiste. Tiene un problema real en el archivo:
+  el PNG esta cortado y la "O" de "PRO" nunca se guardo en la imagen (se puede
+  comprobar abriendolo: termina literalmente en la R). Por eso el sitio ya NO
+  usa esta imagen para el texto -- en su lugar, el icono del arco se extrajo de
+  aqui (esa parte si esta completa) y el texto "ACEL PRO" ahora se escribe
+  como texto real en el HTML, asi siempre se ve completo sin importar el
+  tamano de pantalla.
+
+SI QUIERES VOLVER A USAR UN LOGO EN IMAGEN:
+Pide (o exporta de nuevo) el archivo con el lienzo completo, sin recortar el
+lado derecho, idealmente en SVG o PNG con fondo transparente y al menos
+1600px de ancho. Mientras tanto, la version actual (icono + texto HTML) es
+mas confiable: no se puede "cortar" por accidente y pesa mucho menos.
+
+OTRAS IMAGENES QUE FALTAN (mencionadas en el <head> pero aun no existen):
+- og-image.jpg -> foto de 1200x630px que se muestra al compartir el link en
+  WhatsApp/redes sociales. Subela aqui y no necesitas tocar el codigo, la ruta
+  ya esta lista en index.html.
