@@ -12,6 +12,28 @@
 
   const WHATSAPP_NUMBER = '56984149003';
 
+  /* ---------- Inicio de página al abrir/recargar ----------
+     Evita que algunos navegadores móviles restauren automáticamente
+     la posición anterior (por ejemplo, quedando en el footer).
+     Los enlaces con hash (#contacto, #servicios, etc.) conservan su destino. */
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+  function resetPagePosition() {
+    if (window.location.hash) return;
+    const root = document.documentElement;
+    const previous = root.style.scrollBehavior;
+    root.style.scrollBehavior = 'auto';
+    window.scrollTo(0, 0);
+    root.style.scrollBehavior = previous;
+  }
+  window.addEventListener('load', resetPagePosition, { once: true });
+  window.addEventListener('pageshow', function () {
+    if (!window.location.hash) {
+      window.requestAnimationFrame(resetPagePosition);
+    }
+  });
+
   /* ---------- Formulario de cotización -> WhatsApp ---------- */
   const quoteForm = document.getElementById('quoteForm');
   if (quoteForm) {
