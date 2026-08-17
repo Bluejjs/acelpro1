@@ -418,32 +418,14 @@
     box-shadow:0 0 10px rgba(63,118,168,.6);
   }
 
-  /* header estable: mantiene la misma altura al hacer scroll para evitar saltos */
-  header{transition:background .25s ease, box-shadow .25s ease;}
+  /* header compacts on scroll */
+  header{transition:height .25s ease, background .25s ease, box-shadow .25s ease;}
   header.is-scrolled{box-shadow:0 6px 24px rgba(0,0,0,.28);}
-  .nav{transition:none;}
-
-  /* Botón de menú móvil siempre visible y con fondo */
-  @media (max-width:860px){
-    .nav-toggle{
-      width:44px;
-      height:44px;
-      min-width:44px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      background:var(--orange);
-      color:var(--white);
-      border:1px solid rgba(255,255,255,.28);
-      border-radius:4px;
-      box-shadow:0 4px 14px rgba(0,0,0,.28);
-    }
-    .nav-toggle:hover,.nav-toggle:focus-visible{
-      background:var(--orange-dark);
-      outline:none;
-    }
-    .nav-toggle svg{display:block;}
-  }
+  header.is-scrolled .nav{height:64px;}
+  header.is-scrolled .brand-icon{width:32px;}
+  header.is-scrolled .brand-text{font-size:19px;}
+  header.is-scrolled .brand-text small{display:none;}
+  .nav{transition:height .25s ease;}
 
   /* ================= SCROLL REVEAL ================= */
   [data-reveal]{
@@ -598,4 +580,83 @@
   .hero.hero-full h1{font-size:clamp(34px,10vw,48px);}
   .hero.hero-full p.lead{font-size:15px;}
   .hero-background-image{object-position:58% center;}
+}
+
+
+/* ================= CORRECCION MENU MOVIL =================
+   El menu debe ser completamente opaco y mantenerse por encima del contenido.
+   Tambien evitamos que el header cambie de altura en movil.
+================= */
+@media (max-width:860px){
+  header{
+    height:80px;
+    min-height:80px;
+    background:#0e141c !important;
+    opacity:1 !important;
+  }
+  header .nav{
+    height:80px !important;
+    min-height:80px;
+  }
+  header.is-scrolled .nav{
+    height:80px !important;
+  }
+  header.is-scrolled .brand-icon{
+    width:40px;
+  }
+  header.is-scrolled .brand-text{
+    font-size:23px;
+  }
+  header.is-scrolled .brand-text small{
+    display:block;
+  }
+  .nav-toggle{
+    display:flex !important;
+    align-items:center;
+    justify-content:center;
+    width:46px;
+    height:46px;
+    padding:0;
+    background:#3f76a8 !important;
+    color:#fff !important;
+    border:1px solid rgba(255,255,255,.35);
+    border-radius:4px;
+    box-shadow:0 4px 14px rgba(0,0,0,.35);
+    z-index:220;
+  }
+  .nav-toggle svg{
+    display:block;
+    width:26px;
+    height:26px;
+  }
+  .nav-links{
+    top:80px !important;
+    left:0 !important;
+    right:0 !important;
+    bottom:0 !important;
+    z-index:210 !important;
+    background:#0e141c !important;
+    background-color:#0e141c !important;
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(-8px);
+    box-shadow:0 12px 28px rgba(0,0,0,.55);
+    border-top:1px solid #3f76a8;
+    isolation:isolate;
+    -webkit-backdrop-filter:none !important;
+    backdrop-filter:none !important;
+  }
+  body.nav-open .nav-links{
+    opacity:1 !important;
+    visibility:visible !important;
+    transform:translateY(0) !important;
+  }
+  body.nav-open .nav-links a{
+    color:#f7f8fa !important;
+    background:#0e141c;
+  }
+  body.nav-open .nav-links-cta{
+    background:#3f76a8 !important;
+    color:#fff !important;
+  }
 }
