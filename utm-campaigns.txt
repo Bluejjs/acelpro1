@@ -1,0 +1,31 @@
+ACELPRO - ENLACES UTM RECOMENDADOS
+====================================
+
+Estos enlaces están pensados para campañas y perfiles externos. No se deben usar en enlaces internos del sitio ni en la URL canónica.
+
+DOMINIO:
+https://www.acelpro.cl/
+
+GOOGLE BUSINESS PROFILE
+https://www.acelpro.cl/?utm_source=google&utm_medium=organic&utm_campaign=google_business_profile
+
+INSTAGRAM - PERFIL
+https://www.acelpro.cl/?utm_source=instagram&utm_medium=social&utm_campaign=perfil
+
+FACEBOOK - PERFIL
+https://www.acelpro.cl/?utm_source=facebook&utm_medium=social&utm_campaign=perfil
+
+WHATSAPP - PERFIL/ESTADO
+https://www.acelpro.cl/?utm_source=whatsapp&utm_medium=referral&utm_campaign=perfil
+
+CAMPAÑA ESPECÍFICA: REVISIÓN TÉCNICA
+https://www.acelpro.cl/servicios/revision-tecnica-rechazada.html?utm_source=instagram&utm_medium=social&utm_campaign=revision_tecnica
+
+CAMPAÑA ESPECÍFICA: CAMBIO DE EMBRAGUE
+https://www.acelpro.cl/servicios/cambio-embrague.html?utm_source=instagram&utm_medium=social&utm_campaign=cambio_embrague
+
+CAMPAÑA ESPECÍFICA: MOTORES DIÉSEL
+https://www.acelpro.cl/servicios/reparacion-motor-diesel.html?utm_source=google&utm_medium=organic&utm_campaign=motor_diesel
+
+NOTA:
+Los UTM sirven para medir el origen de las visitas en Analytics. No son una técnica de posicionamiento SEO y no deben agregarse a los enlaces internos del sitio.
